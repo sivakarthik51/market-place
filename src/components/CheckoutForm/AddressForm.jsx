@@ -11,8 +11,7 @@ const AddressForm = ({ checkoutToken, next }) => {
     const [shippingCountry,setshippingCountry] = useState('');
     const [shippingSubdivisions, setshippingSubdivisions] = useState([]);
     const [shippingSubdivision, setshippingSubdivision] = useState('');
-    const [shippingOptions, setShippingOptions] = useState([]);
-    const [shippingOption, setshippingOption] = useState('');
+    const [shippingOptions, setShippingOptions] = useState([]);    
 
     const onCountryChange = (countryCode) => {
         setshippingCountry(countryCode);
@@ -42,7 +41,7 @@ const AddressForm = ({ checkoutToken, next }) => {
     }
     useEffect(() => {
         fetchShippingCountries(checkoutToken.id);
-    },[])
+    })
     const onFinish = values => {
         console.log('Received values of form: ', values);
         next(values);
