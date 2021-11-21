@@ -16,6 +16,9 @@ const Navbar = ({ totalItems }) => {
                 <Typography component={Link} to="/" variant="h6" className={classes.title} color="inherit">
                     <img src={logo} alt="Market Place" height="25px" className={classes.image} />
                 </Typography>
+                <Typography variant = "h7">
+                    This site is a Proof-of-Concept meant to be a demonstration. Do not order!
+                    </Typography>
                 <div className={classes.grow} />
                 {location.pathname==="/" &&
                     <div className={classes.button}>
